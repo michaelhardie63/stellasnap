@@ -8,7 +8,14 @@ const ImageSearch = ({ onSearch, searchedImageUrl }) => {
   const handleInputChange = (event) => {
     const selectedDate = new Date(event.target.value);
     setSearchDate(event.target.value);
-    setFormattedDate(selectedDate.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
+    setFormattedDate(
+      selectedDate.toLocaleDateString('en-US', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      })
+    );
   };
 
   const handleSubmit = async (event) => {
@@ -36,13 +43,19 @@ const ImageSearch = ({ onSearch, searchedImageUrl }) => {
           placeholder="Select a date"
           className="pl-1"
         />
-        <button className="ml-3 py-1 px-2 bg-red-500 text-white" type="submit">Search</button>
+        <button className="ml-3 py-1 px-2 bg-red-500 text-white" type="submit">
+          Search
+        </button>
       </form>
 
-      {searchedImageUrl && (
+      {searchedImageUrl ? (
         <div className="flex flex-col text-center mt-5">
           <h3 className="mb-1 text-lg text-white">{formattedDate}</h3>
           <img src={searchedImageUrl} className="image-container image" alt="Searched Image" />
+        </div>
+      ) : (
+        <div className="flex flex-col text-center mt-5">
+          <p className="text-white">Please select a previous date.</p>
         </div>
       )}
     </section>
