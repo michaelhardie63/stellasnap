@@ -13,7 +13,7 @@ const DailyImage = () => {
     const fetchApodData = async () => {
       try {
         const response = await axios.get(
-          "https://api.nasa.gov/planetary/apod?api_key=CNCR3kHpR52WQrd9974i30CnQlEIcGrkH9hI7CBG"
+          `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_NASA_API_KEY}`
         );
         setApodData(response.data);
       } catch (error) {
