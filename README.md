@@ -1,7 +1,10 @@
+![StellarSnap - 01](/StellarSnap_01.png)
+![StellarSnap - 02](/StellarSnap_02.png)
+
+[Visit here](https://stellarsnap.elaki.com.au/)
+
 # StellaSnap
-allows users to view space images and information. It provides a daily space image and allows users to search for images from specific dates.
-
-
+Allows users to view space images and information. It provides a daily space image and allows users to search for images from specific dates.
 
 ## Features
 
